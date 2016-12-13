@@ -26,6 +26,7 @@ import io.github.rypofalem.armorstandeditor.modes.ArmorStandData;
 import io.github.rypofalem.armorstandeditor.modes.Axis;
 import io.github.rypofalem.armorstandeditor.modes.CopySlots;
 import io.github.rypofalem.armorstandeditor.modes.EditMode;
+import io.github.rypofalem.armorstandeditor.nms.SlotManager;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -248,7 +249,9 @@ public class PlayerEditor {
 	}
 
 	private void toggleDisableSlots(ArmorStand armorStand) {
-		//TODO
+		SlotManager.setDisabled(armorStand, !SlotManager.isDisabled(armorStand));
+		String state = SlotManager.isDisabled(armorStand) ? "on" : "off";
+		sendMessage("disabledslots", state);
 	}
 
 	private void toggleGravity(ArmorStand armorStand) {

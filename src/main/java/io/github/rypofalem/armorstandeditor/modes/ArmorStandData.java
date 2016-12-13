@@ -23,9 +23,11 @@ import org.bukkit.entity.ArmorStand;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.EulerAngle;
 
+import io.github.rypofalem.armorstandeditor.nms.SlotManager;
+
 public class ArmorStandData {
 	public EulerAngle headPos, leftArmPos, rightArmPos, bodyPos, leftLegPos, rightLegPos;
-	public boolean visible, size, basePlate, gravity, showArms;
+	public boolean visible, size, basePlate, gravity, showArms, disableSlots;
 	public ItemStack head, body, legs, feetsies, rightHand, leftHand;
 	
 	ArmorStandData(ArmorStand as){
@@ -46,5 +48,6 @@ public class ArmorStandData {
 		this.feetsies = as.getBoots();
 		this.rightHand = as.getItemInHand();
 		this.leftHand = as.getEquipment().getItemInOffHand();
+		this.disableSlots = SlotManager.isDisabled(as);
 	}
 }

@@ -47,7 +47,6 @@ public class Menu {
 
 	private void fillInventory() {
 		menuInv.clear();
-		@SuppressWarnings("unused")
 		ItemStack xAxis= null, yAxis= null, zAxis= null, coarseAdj= null, fineAdj= null, rotate = null, place = null,
 				headPos= null,
 				rightArmPos= null, bodyPos= null, leftArmPos= null, reset = null, showArms= null, visibility= null, size= null,
@@ -200,7 +199,7 @@ public class Menu {
 			{xAxis, yAxis, zAxis, null, coarseAdj, fineAdj, null, rotate, place,
 					null, headPos, null, null, null, null, null, null, null,
 					rightArmPos, bodyPos, leftArmPos, reset, null, null, showArms, visibility, size,
-					rightLegPos, equipment, leftLegPos, null, null, null, null, gravity, plate,
+					rightLegPos, equipment, leftLegPos, null, null, null, disableSlots, gravity, plate,
 					null, null, null, null, copy, paste, null, null, null,
 					slot1, slot2, slot3, slot4, slot5, slot6, slot7, slot8, slot9
 			};
@@ -224,16 +223,8 @@ public class Menu {
 		return icon;
 	}
 
-	private String getIconName(String path){
-		return getIconName(path, null);
-	}
-
 	private String getIconName(String path, String option){
 		return pe.plugin.getLang().getMessage(path, "iconname", option);
-	}
-
-	private String getIconDescription(String path){
-		return getIconDescription(path, null);
 	}
 
 	private String getIconDescription(String path, String option){

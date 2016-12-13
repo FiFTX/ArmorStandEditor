@@ -43,6 +43,10 @@ setadj:
   msg: Setting adjustment to <x>.
   coarse: Coarse
   fine: Fine
+setdisableslots:
+  msg: Slots turned <x>.
+  on: on
+  off: off
 setgravity: 
   msg: Gravity turned <x>.
   on: on

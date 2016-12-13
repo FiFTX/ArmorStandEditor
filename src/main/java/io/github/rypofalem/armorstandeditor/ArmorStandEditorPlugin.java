@@ -133,7 +133,6 @@ public class ArmorStandEditorPlugin extends JavaPlugin{
 	}
 }
 //todo: 
-//Access to "DisabledSlots" data (probably simplified just a toggle enable/disable)
 //Access to the "Marker" switch (so you can make the hitbox super small)
 //Target a specific armorstand to edit, so solve the issue of editing armorstands close to each other and to make the Marker switch a viable option.
 //Ability for users to set a per-user amount for coarse/fine adjustment
